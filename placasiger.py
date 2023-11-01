@@ -14,22 +14,13 @@ def inseDados(placa, modelo, ano, cor, chassi, ren, cliente, equip):
     chrome.maximize_window()
     chrome.get(url_rotas)
 
-    # url_rotas = "https://tracking.systemsatx.com.br/Veiculo"
-
-    # chrome_options = webdriver.ChromeOptions()
-    # chrome_options.add_argument("--headless")
-
-    # chrome = webdriver.Chrome(options=chrome_options)
-    # chrome.maximize_window()
-    # chrome.get(url_rotas)
-
     wait = WebDriverWait(chrome, 15)  # Aumente o tempo máximo de espera, se necessário
     usuarios = wait.until(ec.visibility_of_element_located((By.XPATH, '//*[@id="txtUsername"]/div/div[1]/input')))
     time.sleep(1)
-    usuarios.send_keys("central3@cllick.com.br")
+    usuarios.send_keys("usuario")
 
     senhas = wait.until(ec.visibility_of_element_located((By.XPATH, '//*[@id="txtSenha"]/div/div[1]/input')))
-    senhas.send_keys("Blftgpds1@")
+    senhas.send_keys("senha")
 
     chrome.find_element(By.XPATH, '//*[@id="btnSenha"]').click()
 
