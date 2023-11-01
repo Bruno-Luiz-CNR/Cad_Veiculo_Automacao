@@ -21,11 +21,11 @@ def pesquisar(placa):
 
         usuario = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[2]/div/div/div[4]/form/'
                                                                          'div/div[1]/input')))
-        usuario.send_keys("Bruno")
+        usuario.send_keys("usuário")
 
         senha = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[3]/div[2]/div/div/div[4]/form/'
                                                                        'div/div[2]/input')))
-        senha.send_keys("Blftgpds1@")
+        senha.send_keys("senha")
 
         chrome.find_element(By.XPATH, '/html/body/div[3]/div[2]/div/div/div[4]/form/div/div[3]/button').click()
 
